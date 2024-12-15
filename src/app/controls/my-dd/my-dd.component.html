@@ -1,0 +1,15 @@
+<div
+  role="group"
+  class="example-tel-input-container"
+  [formGroup]="parts"
+  [attr.aria-labelledby]="_formField?.getLabelId()"
+  (focusin)="onFocusIn()"
+  (focusout)="onFocusOut($event)">
+
+    <mat-select
+        formControlName="partsSelectedValue">
+        <mat-option value="Male">Male</mat-option>
+        <mat-option value="Female">Female</mat-option>
+    </mat-select> 
+
+</div>

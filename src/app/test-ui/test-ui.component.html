@@ -1,0 +1,31 @@
+
+<!-- <form-field-custom-control-example></form-field-custom-control-example> -->
+
+<div [formGroup]="form">
+    <mat-form-field>
+        <mat-label>Phone number</mat-label>
+        <example-tel-input formControlName="Phone1" required></example-tel-input>
+        <mat-icon matSuffix>phone</mat-icon>
+        <mat-hint>Include area code</mat-hint>
+    </mat-form-field>
+    <span>&nbsp;</span>
+    <mat-form-field>
+        <mat-label>Phone number</mat-label>
+        <app-my-phone formControlName="Phone2"></app-my-phone>
+        <mat-icon matSuffix>phone</mat-icon>
+        <mat-hint>Add number</mat-hint>
+    </mat-form-field>
+    <span>&nbsp;</span>
+    <mat-form-field>
+        <mat-label>My DD</mat-label>
+        <app-my-dd formControlName="Gender"></app-my-dd>
+        <mat-hint>Select dropdown</mat-hint>
+    </mat-form-field>
+    <br/>
+    <br/>
+    <p>Entered value: {{form.valueChanges | async | json}}</p>
+</div>
+
+<div>
+    <input type="button" value="Check value on console" (click)="checkFormValue()" />
+</div>
